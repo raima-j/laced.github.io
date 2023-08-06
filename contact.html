@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--ASSIGNMENT 1-->
+<head>
+    <link rel="stylesheet" href="styleSelf.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        .title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #2b0f67;
+  --color-2: #3D8DAE;
+  --color-3: #1c1855;
+}
+
+.title-word-2 {
+  --color-1: #251396;
+  --color-2: #140d47;
+  --color-3: #6074cf;
+}
+
+.title-word-3 {
+  --color-1: #69a8d4;
+  --color-2: #9ea8f2;
+  --color-3: #6872f9;
+}
+
+.title-word-4 {
+  --color-1: #3d6aae;
+  --color-2: #70b3f1;
+  --color-3: #2287b7;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+.container {
+    
+  display: block;
+  margin-left: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size:50px;
+  text-transform: uppercase;
+}
+
+iframe{
+    position: relative;
+    z-index: -1;
+  border: #140d47;
+  background-color: rgb(23, 10, 53);
+            color: rgb(155, 161, 218);
+            opacity: 80%;
+}
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+<!-- Navbar items -->
+<nav> 
+  <a href="/IWP CODES/Laced Website/Website.html">Home</a>
+  <a href="/IWP CODES/Laced Website/products.html">Our Products</a>
+  <a href="/IWP CODES/Laced Website/showrooms.html">Our Showrooms</a>
+  <a href="/IWP CODES/Laced Website/look.html">Take a Look</a>
+  <a href="#footer">Contact Us</a>
+</nav>
+    
+    <div id="d1">
+      <img src="/IWP CODES/Laced Website/pngwing.com (1).png" alt="flower">
+  </div>
+  <div id="d2">
+      <img src="/IWP CODES/Laced Website/pngwing.com (1).png" alt="flower">
+  </div>
+  <div id="d3">
+      <img src="/IWP CODES/Laced Website/pngwing.com (1).png" alt="flower">
+  </div>
+  
+<div class="container">
+    <p class="title">
+      <span class="title-word title-word-1">Send</span>
+      <span class="title-word title-word-2">Us</span>
+      <span class="title-word title-word-3">A</span>
+      <span class="title-word title-word-4">Feedback</span>
+    </p>
+  </div>
+
+<!--feedback form JS-->
+
+
+<center><iframe src="feedform.html" height="800" width="500" name="TT"> </iframe>  </center>
+
+    <div id="footer">
+        <pre>Created by Raima J
+    2162062
+    
+    ceo@laced.org
+    ~Laced~</pre>
+    </div>
+</body>

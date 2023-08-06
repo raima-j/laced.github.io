@@ -1,0 +1,101 @@
+<style>
+  
+form{
+    display: block;
+    
+    z-index: -1;
+    color: #c3d5fc;
+font-family: 'Cormorant';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 50px;
+text-align: center;
+}
+
+#feedback{
+  width: 300px;
+  height: 100px;
+}
+
+#sub{
+  position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            color: aliceblue;
+            font-size:large;
+            border-radius:6px;
+            z-index: 1;
+            padding:12px;
+            border-color: rgb(123, 128, 226);
+            background-color: rgb(123, 128, 226);
+}
+
+#sub:hover{
+  position: relative;
+            transition:0.35s ease-in;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+            color: aliceblue;
+            font-size:large;
+            border-radius:6px;
+            z-index: 1;
+            padding:12px;
+            border-radius:6px;
+            border-color: rgb(167, 167, 228);
+            background-color: rgb(167, 167, 228);
+}
+#res{
+  animation: fade-in 4s ease-in forwards;
+  color: rgb(127, 202, 255);
+  font-weight: bold;
+}
+
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-10px);
+      opacity: 0;
+  }
+  50% {
+    transform: translateY(-30px);
+      opacity: 0.5;
+  }
+  100% {transform: translateY(-50px);
+      opacity: 1;
+  }
+
+}
+
+
+
+</style>
+
+<body>
+<script>
+  function res(){
+      html=document.getElementById('res').innerHTML="Feedback Submitted!";
+      element=document.getElementById('sub');
+      element.remove();
+  }
+ 
+</script>
+
+<form>
+  <br>
+    Your Name? <input type="text" value="" id="name"><br>
+    Your Email? <input type="email" value="" id="email"><br>
+    <br><br>
+    Feedback: <br><input type="input" placeholder="Give us your thoughts." value="" id="feedback"><br>
+    <div class="container">
+        <p type="button" onclick="res()" id="sub">Submit</p><br>
+        <p type="text"  id="res"></p><br>
+      </div>
+      
+    
+</form>
+</body>
