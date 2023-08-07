@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <style>
   
 form{
@@ -13,63 +12,55 @@ font-size: 24px;
 line-height: 50px;
 text-align: center;
 }
-
-#feedback{
-  width: 300px;
-  height: 100px;
+/* styles.css */
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-#sub{
-  position: relative;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: fit-content;
-            color: aliceblue;
-            font-size:large;
-            border-radius:6px;
-            z-index: 1;
-            padding:12px;
-            border-color: rgb(123, 128, 226);
-            background-color: rgb(123, 128, 226);
+.login-form {
+  background-color:  #a6a6ec;
+  padding: 20px;
+  border: 2px solid #a6a6ec;
+  margin: 10px;
+  border-radius: 5px;
+  width: 90%;
+  height: 60%;
+  color: #393174;
+  text-align: center;
 }
 
-#sub:hover{
-  position: relative;
-            transition:0.35s ease-in;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            
-            color: aliceblue;
-            font-size:large;
-            border-radius:6px;
-            z-index: 1;
-            padding:12px;
-            border-radius:6px;
-            border-color: rgb(167, 167, 228);
-            background-color: rgb(167, 167, 228);
-}
-#res{
-  animation: fade-in 4s ease-in forwards;
-  color: rgb(127, 202, 255);
-  font-weight: bold;
+.payment-section{
+  background-color:  #a6a6ec;
+  padding: 20px;
+  border: 2px solid #a6a6ec;
+  margin: 0%;
+  border-radius: 5px;
+  width: 100%;
+  height: 60%;
+  color: #393174;
+  text-align: center;
 }
 
+input, button {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+}
 
-@keyframes fade-in {
-  0% {
-    transform: translateY(-10px);
-      opacity: 0;
-  }
-  50% {
-    transform: translateY(-30px);
-      opacity: 0.5;
-  }
-  100% {transform: translateY(-50px);
-      opacity: 1;
-  }
+button {
+  background-color: #070766;
+  color:#c3d5fc;
+  border: none;
+  cursor: pointer;
+}
 
+button:hover {
+  background-color: #5e6bb1;
 }
 
 
@@ -77,26 +68,31 @@ text-align: center;
 </style>
 
 <body>
-<script>
-  function res(){
-      html=document.getElementById('res').innerHTML="Feedback Submitted!";
-      element=document.getElementById('sub');
-      element.remove();
-  }
- 
-</script>
 
-<form>
-  <br>
-    Your Name? <input type="text" value="" id="name"><br>
-    Your Email? <input type="email" value="" id="email"><br>
-    <br><br>
-    Feedback: <br><input type="input" placeholder="Give us your thoughts." value="" id="feedback"><br>
-    <div class="container">
-        <p type="button" onclick="res()" id="sub">Submit</p><br>
-        <p type="text"  id="res"></p><br>
-      </div>
-      
-    
+<div class="container">
+  <div class="login-form">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  
+  <div class="payment-section">
+    <h2>Payment</h2>
+    <form id="paymentForm">
+      <input type="text" id="cardNumber" placeholder="Card Number" required>
+      <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+      <input type="text" id="cvv" placeholder="CVV" required>
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
 </form>
 </body>
+
+
