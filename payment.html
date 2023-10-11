@@ -1,0 +1,102 @@
+<style>
+  
+form{
+    display: block;
+    
+    z-index: -1;
+    color: #c3d5fc;
+font-family: 'Cormorant';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 50px;
+text-align: center;
+}
+
+
+.payment-section{
+  
+  background-color:  #a6a6ec;
+  padding: 20px;
+  border: 2px solid #a6a6ec;
+  margin-top: 10%;
+  margin-left: 33%;
+  border-radius: 5px;
+  width: fit-content;
+  height: 60%;
+  color: #393174;
+  text-align: center;
+}
+
+input, button {
+  display: block;
+  margin-top: 7%;
+  margin-bottom: 10px;
+  width: 500px;
+  padding: 10px;
+}
+
+button {
+  background-color: #070766;
+  color:#c3d5fc;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5e6bb1;
+}
+
+</style>
+
+<!DOCTYPE html>
+<!--ASSIGNMENT 1-->
+
+<head>
+    <link rel="stylesheet" href="styleSelf.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+    <!-- Navbar items -->
+    <nav>
+        <a href="http://localhost/Laced%20Website/index.html">Home</a>
+        <a href="http://localhost/Laced%20Website/products.html">Our Products</a>
+        <a href="http://localhost/Laced%20Website/showrooms.html">Our Showrooms</a>
+        <a href="http://localhost/Laced%20Website/look.html">Take a Look</a>
+        <a href="http://localhost/Laced%20Website/contact.html">Contact Us</a>
+    </nav>
+
+    <div id="design">
+        <img src="Blue-Flower-PNG-Photo.png" alt="flower">
+    </div>
+
+    <div id="design1">
+        <img src="Blue-Flower-PNG-Photo.png" alt="flower">
+    </div>
+ 
+
+<div class="payment-section">
+  <h2>Payment</h2>
+  <form id="paymentForm" action="http://localhost/Laced%20Website/successCrud.php">
+    <input type="text" name="cardNumber" placeholder="Card Number" required>
+    <input type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+    <input type="text" name="cvv" placeholder="CVV" required>
+    <button type="submit">Pay Now</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+
+</form>
+<div id="footer">
+    <pre>Created by Raima J
+2162062
+
+ceo@laced.org
+~Laced~</pre>
+</div>
+
+</body>
+</html>
